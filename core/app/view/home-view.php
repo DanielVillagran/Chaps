@@ -97,10 +97,10 @@ for($i=$sd;$i<=$ed;$i+=(60*60*24)){
       </div>
       <!-- /.row -->
 
-      <div class="row">
+     <!--  <div class="row">
         <div class="col-md-12">
           <div class="box box-primary">
-            <!-- /.box-header -->
+             /.box-header
             <div class="box-body">
               <div class="row">
                 <div class="col-md-12">
@@ -170,14 +170,11 @@ Morris.Area({
 
 
 
-                  <!-- /.chart-responsive -->
+                  /.chart-responsive
                 </div>
-                <!-- /.col -->
 
-                <!-- /.col -->
               </div>
-              <!-- /.row -->
-            </div>
+            </div> -->
             <!-- 
             <div class="box-footer">
               <div class="row">
