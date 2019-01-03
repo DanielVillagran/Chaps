@@ -22,6 +22,11 @@
     <![endif]-->
     <?php 
     date_default_timezone_set('America/Mexico_City');
+    if( ! ini_get('date.timezone') )
+{
+    date_default_timezone_set('GMT');
+}
+    
      ?>
           <script src="plugins/jquery/jquery-2.1.4.min.js"></script>
 <script src="plugins/morris/raphael-min.js"></script>
