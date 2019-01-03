@@ -4,15 +4,11 @@ class ProductData {
 
 	public function ProductData(){
 		$this->description = "";
-		$this->inventary_min = "";
 		$this->category_id = "";
 		$this->name = "";
-		$this->price_in = "";
 		$this->price_out = "";
-		$this->unit = "";
 		$this->user_id = "";
 		$this->image = "";
-		$this->presentation = "0";
 		$this->created_at = "NOW()";
 	}
 
