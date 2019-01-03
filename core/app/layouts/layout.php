@@ -20,6 +20,9 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <?php 
+    date_default_timezone_set('America/Mexico_City');
+     ?>
           <script src="plugins/jquery/jquery-2.1.4.min.js"></script>
 <script src="plugins/morris/raphael-min.js"></script>
 <script src="plugins/morris/morris.js"></script>
