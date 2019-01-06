@@ -222,7 +222,7 @@
                 <li><a href="./?view=re">Abastecer</a></li>
                 <?php if(Core::$user->kind==1):?>
                   <li><a href="./?view=stocks">Inventarios</a></li>
-                  <li><a href="./?view=selectstock">Traspasar</a></li>
+                  <!-- <li><a href="./?view=selectstock">Traspasar</a></li> -->
                   <li><a href="./?view=dev">Devolucion</a></li>
                 <?php endif; ?>
               </ul>
@@ -233,8 +233,8 @@
                 <ul class="treeview-menu">
                   <li><a href="./?view=reports">Inventario</a></li>
                   <li><a href="./?view=sellreports">Ventas</a></li>
-                  <li><a href="./?view=resreport">Compras</a></li>
-                  <li><a href="./?view=paymentreport">Reporte de pagos</a></li>
+                  <!-- <li><a href="./?view=resreport">Compras</a></li> -->
+                  <!-- <li><a href="./?view=paymentreport">Reporte de pagos</a></li> -->
                   <li><a href="./?view=popularproductsreport">Productos Populares</a></li>
                 </ul>
               </li>
