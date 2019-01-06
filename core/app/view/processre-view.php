@@ -27,7 +27,7 @@ $process = true;
 			$product = ProductData::getById($c["product_id"]);
 
 			$op = new OperationData();
-			$op->price_in = $product->price_in;
+			$op->price_in = 0;
 			$op->price_out = $product->price_out;
 			$op->stock_id = $_POST["stock_id"];
 			 $op->product_id = $c["product_id"] ;
@@ -56,7 +56,6 @@ if($_POST["client_id"]!=""){
 		<td>Almacen</td>
 		<td>Estado de pago</td>
 		<td>Estado de entrega</td>
-		<td>Total</td>
 		</tr>
 <tr>
 		<td>".$s[1]."</td>
@@ -64,21 +63,16 @@ if($_POST["client_id"]!=""){
 		<td>".StockData::getById($sell->stock_to_id)->name."</td>
 		<td>".PData::getById($sell->p_id)->name."</td>
 		<td>".DData::getById($sell->d_id)->name."</td>
-		<td> $".number_format($sell->total,2,".",",")."</td>
 		</tr>
 		</table>";
 		$message.="<h3 style='color:#333;'>Resumen</h3>";
-		$message.="<table border='1'><thead><th>Id</th><th>Codigo</th><th>Cantidad</th><th>Unidad</th><th>Producto</th><th>P.U</th><th>P. Total</th></thead>";
+		$message.="<table border='1'><thead><th>Id</th><th>Codigo</th><th>Cantidad</th><th>Unidad</th><th>Producto</th></thead>";
 		foreach($cart as  $c){
 			$message.="<tr>";
 		$product = ProductData::getById($c["product_id"]);
 		$message.="<td>".$product->id."</td>";
-		$message.="<td>".$product->barcode."</td>";
 		$message.="<td>".$c["q"]."</td>";
-		$message.="<td>".$product->unit."</td>";
 		$message.="<td>".$product->name."</td>";
-		$message.="<td>$ ".number_format($product->price_in,2,".",",")."</td>";
-		$message.="<td>$ ".number_format($c["q"]*$product->price_in,2,".",",")."</td>";
 		$message.="</tr>";
 		}
 		$message.="</table>";

@@ -59,8 +59,7 @@ if(Core::$user->kind==3){ Core::redir("./?view=sell"); }
         
         <!-- /.col -->
       </div>
-      <!-- /.row ->
-
+   
 
 
 
