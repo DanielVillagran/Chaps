@@ -51,15 +51,49 @@ if(Core::$user->kind==3){ Core::redir("./?view=sell"); }
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
+        
         <!-- /.col -->
 
         <!-- fix for small devices only -->
         <div class="clearfix visible-sm-block"></div>
 
-        
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-shopping-cart"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Ventas del mes</span>
+              <span class="info-box-number"><?php echo $nsells;?></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-area-chart"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Ingresos del Mes</span>
+              <span class="info-box-number">$ <?php echo number_format($ntot,2,".",",");?></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
         <!-- /.col -->
       </div>
-   
+      <!-- /.row -->
+
+
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
 
 
 
