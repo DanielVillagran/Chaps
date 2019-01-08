@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("../fonts/Gilroy-Bold.ttf");
+
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Semi Bold";
+    src: url("../fonts/OpenSans-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+
+#menu {
+    background-color: white;
+
+}
+
+#menu a {
+    font-size: 2.5vh;
+    color: rgba(0,0,0,.7);
+    font-family: "Open Sans";
+    text-decoration: none;    
+}
+
+#menu li{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+#menu #icon{
+    width: 3.3vh;
+    margin-right: 2vh;
+    margin-top: -4px;
+}
+
+#imgsidenav {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    width: 40%;
+}
+
+#iconmenu {
+    width: 5vh;
+    cursor: pointer;
+}
+
+#navmenu{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bodylogin{
+    background-image: url(../images/backlogin.png);
+
+}
+
+
+.divcenter{
+    background-color: white;
+    height: 53%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 20px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+    
+}
+
+#logologin{
+    width: 80px;
+}
+
+.inputlogin{
+    margin-top: 16px;
+    background-color: #EBEBEB;
+    border-radius: 100px;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Open Sans";
+    color: black;
+    transition: .5s;
+    
+}
+
+.inputlogin::placeholder{
+    color: rgba(0,0,0,.6);
+}
+
+.inputlogin:focus, .inputlogin:active{
+    box-shadow: 0 9px 30px 0 rgba(0, 154, 86, 0.3);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+  
+}
+
+.btnlogin{
+    border: none;
+    font-family: "Open Sans";
+    font-size: 15px;
+    margin-top: 25px;
+    width: 50.4%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient(90deg,#009A56, #55BB8E);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.btnlogin:hover {
+    background: white;
+    color: #009A56;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+#plogin{
+    margin-top: 15px;
+    font-family: "Open Sans";
+    font-size: 18px;
+
+}
+
+
+#toplogin{
+    display: flex;
+    justify-content: space-between;
+}
+
+#divlogo{
+    margin-bottom:20px;
+}
+
+#divbtnside{
+    padding-right: 30px;
+    padding-top: 30px;
+    
+}
+
+#divbtnback{
+    padding-left: 23px;
+    padding-top: 29px;
+}
+
+#pbienvenida{
+    color: white;
+    font-family: "Open Sans";
+    font-size: 30px;
+    letter-spacing: .2px;
+}
+
+.divmenu{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+}
+
+#rowmenuitems{
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+#pitemmenu{
+    font-family: "Gilroy Bold";
+    font-size: 28px;
+    margin-top: 25px;
+}
+
+#divinfoinicio{
+    display: flex;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+#divpinicio{
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#imgmascotainicio{
+    width: 80px;
+}
+
+.imgiteminicio{
+    width: 50%;
+    
+}
+
+.ptitle{
+    color: white;
+    font-size: 40px;
+    font-family: "Gilroy Bold";
+    letter-spacing: .2px;
+    padding-right: 30px;
+    text-align: left;
+    padding-top: 20px;
+    margin-left: -79px;
+ 
+}
+
+.inputsearchpro{
+    background-color: #EBEBEB;
+    border-radius: 100px;
+    width: 50%;
+    font-size: 15px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Open Sans";
+    color: black;
+    transition: .5s;
+    margin-bottom: 30px;
+}
+
+#divprodcutos{
+    background-color: #F6FAFC;
+    border-radius: 0px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#pcarrito{
+    color: white;
+    text-align: right;
+    font-size: 30px;
+    font-family: "Gilroy Bold";
+    letter-spacing: .2px;
+    padding-right: 30px;
+}
+
+.divitemproducto{
+    margin-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -10px 15px 50px 0 rgba(0, 0, 0, 0.1);
+   
+}
+
+#sombras{
+     box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+    
+}
+
+#sombras:hover{
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+}
+
+#imgproducto{
+    width: 50%;
+    padding-top: 10px;
+}
+
+.pitemproducto{
+    margin-top: 10px;
+    font-family: "Gilroy Bold";
+    font-size: 23px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#rowproductos{
+    overflow-y: auto; 
+    height:  74vh;
+    
+}
+
+#bodylogin{
+    height: 100%;
+    
+}
