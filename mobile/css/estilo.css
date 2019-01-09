@@ -26,19 +26,19 @@
 
 #menu a {
     font-size: 2.5vh;
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, .7);
     font-family: "Open Sans";
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-#menu li{
+#menu li {
     padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 15px;
 }
 
 
-#menu #icon{
+#menu #icon {
     width: 3.3vh;
     margin-right: 2vh;
     margin-top: -4px;
@@ -55,18 +55,18 @@
     cursor: pointer;
 }
 
-#navmenu{
+#navmenu {
     display: flex;
     justify-content: space-between;
 }
 
-#bodylogin{
+#bodylogin {
     background-image: url(../images/backlogin.png);
 
 }
 
 
-.divcenter{
+.divcenter {
     background-color: white;
     height: 53%;
     margin: auto;
@@ -81,14 +81,14 @@
     padding-left: 40px;
     padding-right: 40px;
     box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
-    
+
 }
 
-#logologin{
+#logologin {
     width: 80px;
 }
 
-.inputlogin{
+.inputlogin {
     margin-top: 16px;
     background-color: #EBEBEB;
     border-radius: 100px;
@@ -102,20 +102,21 @@
     font-family: "Open Sans";
     color: black;
     transition: .5s;
-    
+
 }
 
-.inputlogin::placeholder{
-    color: rgba(0,0,0,.6);
+.inputlogin::placeholder {
+    color: rgba(0, 0, 0, .6);
 }
 
-.inputlogin:focus, .inputlogin:active{
+.inputlogin:focus,
+.inputlogin:active {
     box-shadow: 0 9px 30px 0 rgba(0, 154, 86, 0.3);
     transition: all 1s cubic-bezier(.25, .8, .25, 1);
-  
+
 }
 
-.btnlogin{
+.btnlogin {
     border: none;
     font-family: "Open Sans";
     font-size: 15px;
@@ -125,7 +126,7 @@
     padding-bottom: 10px;
     border-radius: 100px;
     color: white;
-    background: linear-gradient(90deg,#009A56, #55BB8E);
+    background: linear-gradient(90deg, #009A56, #55BB8E);
     transition: 1s;
     cursor: pointer;
 }
@@ -138,7 +139,7 @@
 
 }
 
-#plogin{
+#plogin {
     margin-top: 15px;
     font-family: "Open Sans";
     font-size: 18px;
@@ -146,34 +147,34 @@
 }
 
 
-#toplogin{
+#toplogin {
     display: flex;
     justify-content: space-between;
 }
 
-#divlogo{
-    margin-bottom:20px;
+#divlogo {
+    margin-bottom: 20px;
 }
 
-#divbtnside{
+#divbtnside {
     padding-right: 30px;
     padding-top: 30px;
-    
+
 }
 
-#divbtnback{
+#divbtnback {
     padding-left: 23px;
     padding-top: 29px;
 }
 
-#pbienvenida{
+#pbienvenida {
     color: white;
     font-family: "Open Sans";
     font-size: 30px;
     letter-spacing: .2px;
 }
 
-.divmenu{
+.divmenu {
     background-color: white;
     border-radius: 20px;
     width: 100%;
@@ -183,39 +184,40 @@
     cursor: pointer;
 }
 
-#rowmenuitems{
+#rowmenuitems {
     padding-top: 30px;
     padding-left: 100px;
     padding-right: 100px;
-    
+
 }
-#pitemmenu{
+
+#pitemmenu {
     font-family: "Gilroy Bold";
     font-size: 28px;
     margin-top: 25px;
 }
 
-#divinfoinicio{
+#divinfoinicio {
     display: flex;
     padding-left: 100px;
     padding-top: 50px;
 }
 
-#divpinicio{
+#divpinicio {
     padding-left: 20px;
     padding-top: 40px;
 }
 
-#imgmascotainicio{
+#imgmascotainicio {
     width: 80px;
 }
 
-.imgiteminicio{
+.imgiteminicio {
     width: 50%;
-    
+
 }
 
-.ptitle{
+.ptitle {
     color: white;
     font-size: 40px;
     font-family: "Gilroy Bold";
@@ -224,26 +226,11 @@
     text-align: left;
     padding-top: 20px;
     margin-left: -79px;
- 
+
 }
 
-.inputsearchpro{
-    background-color: #EBEBEB;
-    border-radius: 100px;
-    width: 50%;
-    font-size: 15px;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: "Open Sans";
-    color: black;
-    transition: .5s;
-    margin-bottom: 30px;
-}
 
-#divprodcutos{
+#divprodcutos {
     background-color: #F6FAFC;
     border-radius: 0px;
     padding-top: 30px;
@@ -251,42 +238,42 @@
     padding-right: 30px;
 }
 
-#pcarrito{
+#pcarrito {
     color: white;
-    text-align: right;
+    text-align: left;
     font-size: 30px;
     font-family: "Gilroy Bold";
     letter-spacing: .2px;
-    padding-right: 30px;
+    padding-left: 10px;
 }
 
-.divitemproducto{
+.divitemproducto {
     margin-bottom: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: -10px 15px 50px 0 rgba(0, 0, 0, 0.1);
-   
+    box-shadow: -1px 10px 35px 0 rgba(0, 0, 0, 0.1);
+
 }
 
-#sombras{
-     box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+#sombras {
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0);
     transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
-    
+
 }
 
-#sombras:hover{
+#sombras:hover {
     box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
 }
 
-#imgproducto{
+#imgproducto {
     width: 50%;
     padding-top: 10px;
 }
 
-.pitemproducto{
+.pitemproducto {
     margin-top: 10px;
     font-family: "Gilroy Bold";
     font-size: 23px;
@@ -294,13 +281,161 @@
     padding-right: 30px;
 }
 
-#rowproductos{
-    overflow-y: auto; 
-    height:  74vh;
+#rowproductos {
+    overflow-y: auto;
+    height: 74vh;
+
+}
+
+#bodylogin {
+    height: 100%;
+
+}
+
+#tablacarrito th {
+    color: white;
+    font-family: "Open Sans Bold";
+    font-weight: normal;
+    font-size: 15px;
+    border: none;
+
+}
+
+#tablacarrito td {
+    font-family: "Open Sans";
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+
+
+}
+
+#thproducto {
+    padding-left: 10px;
+    width: 190px;
+}
+
+#thprecio {
+    text-align: center;
+    width: 100px;
+
+}
+
+#thborrar {
+    text-align: center;
+
+
+}
+
+.tdproducto {
+    padding-left: 10px;
+    width: 190px;
+}
+
+.tdprecio {
+    text-align: center;
+    width: 100px;
+
+}
+
+.tdborrar {
+    text-align: center;
+    width: 70px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td,
+.table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(0, 0, 0, .04);
+}
+
+
+thead,
+tbody {
+    display: block;
+}
+
+tbody {
+    width: 100%;
+    height: 49vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#iconborrar {
+    width: 30px;
+}
+
+#ptotal{
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: white;
+}
+
+#totalcarrito{
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-family: "Open Sans Semi Bold";
+    font-weight: normal;
     
 }
 
-#bodylogin{
-    height: 100%;
-    
+#divtotal{
+    padding-top: 30px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.btncobrar{
+    margin-top: 12px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #00C69D;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btncobrar:focus, .btncobrar:active{
+    background-color: white;
+    outline: none;
+}
+
+.inputsearchpro {
+    padding-left: 35px !important;
+    padding-right: 65px !important;
+    border-radius: 100px !important;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    width: 50%;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+    font-size: 17px;
+    background-image: url(../images/iconsearch.png);
+    background-position: right;
+    background-size: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: "Open Sans";
+    letter-spacing: .1px;
+    border: none;
+    background-color: rgba(0,0,0,.1);
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+
+.inputsearchpro:focus {
+
+    box-shadow: 0 3px 40px 0 rgba(0, 0, 0, .15), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    color: #00663B;
 }
