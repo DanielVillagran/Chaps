@@ -13,5 +13,5 @@ function logout(){
 }
 function iniciovender() {
 
- window.location.replace( 'vender.html?id='+userid);
+ window.location.href= 'vender.html?id='+userid;
 }
