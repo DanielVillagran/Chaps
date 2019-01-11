@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vender, Chap's</title>
+
+    <!--========================VENDOR================================================================-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <!--========================STYLE================================================================-->
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body id="bodylogin">
+
+    <div>
+        <ul id="menu" class="side-nav">
+
+            <center>
+                <img id="imgsidenav" src="images/logochaps.PNG" alt="">
+            </center>
+            <li> <a href="menu.html">Inicio</a></li>
+            <li> <a href="aboutme.html">Vender</a></li>
+            <li><a href="services.html">Ventas</a></li>
+            <li><a href="portafolio.html">Cerrar sesón</a></li>
+
+
+        </ul>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <div class="text-left" id="divbtnback">
+                    <img onclick="back();" id="iconmenu" src="images/espalda.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+                <p class="ptitle">Mis ventas</p>
+            </div>
+
+            <div class="col-md-2">
+                <div class="text-right" id="divbtnside">
+                    <a href="#" data-activates='menu' class="button-collapse">
+                        <img id="iconmenu" src="images/menu.png" ; alt="">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div id="rowventas" class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control inputsearchventas" placeholder="Buscar ventas">
+
+
+            </div>
+            
+            <div class="col-md-6">
+
+                 <a onclick="corte(1)" class="btn btn-primary btncorte"><img id="iconbtnagregar" src="images/iconcorte2.png" alt=""> <span>Corte de caja</span></a>
+
+            </div>
+            
+            <div class="col-md-12">
+                     <table class="table table-striped">
+       <thead>
+           <tr>
+               <th scope="col">#</th>
+               <th scope="col">First</th>
+               <th scope="col">Last</th>
+               <th scope="col">Handle</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <th scope="row">1</th>
+               <td>Mark</td>
+               <td>Otto</td>
+               <td>@mdo</td>
+           </tr>
+           <tr>
+               <th scope="row">2</th>
+               <td>Jacob</td>
+               <td>Thornton</td>
+               <td>@fat</td>
+           </tr>
+           <tr>
+               <th scope="row">3</th>
+               <td>Larry</td>
+               <td>the Bird</td>
+               <td>@twitter</td>
+           </tr>
+       </tbody>
+   </table>
+            </div>
+            
+
+
+        </div>
+        
+   
+
+
+    </div>
+
+
+
+    <script src="js/sidenav.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>
