@@ -194,7 +194,7 @@
               <li><a href="./?view=products"><i class='fa fa-cutlery'></i> <span>Productos</span></a></li>
               <li><a href="./?view=categories"><i class='fa fa-sitemap'></i> <span>Categorias</span></a></li>
               <li><a href="./?view=stocks"><i class='fa fa-building'></i> <span>Almacenes</span></a></li>
-              <li><a href="./?view=box"><i class='fa fa-briefcase'></i><span>Cortes de Caja</span></a></li>
+              <li><a href="./?view=boxhistory"><i class='fa fa-briefcase'></i><span>Cortes de Caja</span></a></li>
             <!--             <li class="treeview">
               <a href="#"><i class='fa fa-database'></i> <span>Catalogos</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
