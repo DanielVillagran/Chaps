@@ -1,10 +1,12 @@
 var server="http://brayammorando.com/Chaps";
 var username="";
 var userid="";
+var stock='';
 $(document).ready(function(){
 	var url=window.location.href.split("?id=");
 	url=url[1].split("&name=");
-	username=url[1];
+	username=url[1].split("&stock=")[0];
+	stock=url[1].split("&stock=")[1];
 	userid=url[0];
 	$("#userinicio").empty().append(username);
 });
@@ -13,5 +15,9 @@ function logout(){
 }
 function iniciovender() {
 
- window.location.href= 'vender.html?id='+userid;
+ window.location.href= 'vender.html?id='+userid+'&stock='+stock;
+}
+function inicioventas() {
+
+ window.location.href= 'ventas.html?id='+userid+'&stock='+stock;
 }
