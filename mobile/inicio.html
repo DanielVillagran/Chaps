@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bienvenida, Chap's</title>
+    <title>Inicio, Chap's</title>
 
     <!--========================VENDOR================================================================-->
     <link rel="stylesheet" href="css/materialize.min.css">
@@ -33,11 +33,13 @@
             <center>
                 <img id="imgsidenav" src="images/logochaps.PNG" alt="">
             </center>
-            <li> <a href="menu.html">Inicio</a></li>
-            <li onclick="iniciovender();"> <a>Vender</a></li>
-            <li onclick="inicioventas();"><a>Ventas</a></li>
-            <li onclick="logout()"><a>Cerrar sesón</a></li>
-
+            
+            <li> <a href="inicio.html"><img class="iconsidenav" src="images/iconinicio.png" alt="">Inicio</a></li>
+            <li> <a onclick="iniciovender();"><img class="iconsidenav" src="images/iconvender.png" alt="">Vender</a></li>
+            <li><a onclick="inicioventas();"><img class="iconsidenav" src="images/iconventas2.png" alt="">Mis ventas</a></li>
+            <li><a href="devoluciones.html"><img class="iconsidenav" src="images/icondevoluciones.png" alt="">Devoluciones</a></li>
+            <li><a onclick="logout();"><img class="iconsidenav" src="images/iconcerrarsesion.png" alt="">Cerrar sesón</a></li>
+            
 
         </ul>
 

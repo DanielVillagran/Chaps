@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devoluciones, Chap's</title>
+
+    <!--========================VENDOR================================================================-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert2.all.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <!--========================STYLE================================================================-->
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body id="bodylogin">
+
+    <div>
+        <ul id="menu" class="side-nav">
+
+            <center>
+                <img id="imgsidenav" src="images/logochaps.PNG" alt="">
+            </center>
+            <li> <a href="inicio.html"><img class="iconsidenav" src="images/iconinicio.png" alt="">Inicio</a></li>
+            <li> <a onclick="iniciovender();"><img class="iconsidenav" src="images/iconvender.png" alt="">Vender</a></li>
+            <li><a onclick="inicioventas();"><img class="iconsidenav" src="images/iconventas2.png" alt="">Mis ventas</a></li>
+            <li><a href="devoluciones.html"><img class="iconsidenav" src="images/icondevoluciones.png" alt="">Devoluciones</a></li>
+            <li><a onclick="logout();"><img class="iconsidenav" src="images/iconcerrarsesion.png" alt="">Cerrar sesón</a></li>
+
+
+        </ul>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <div class="text-left" id="divbtnback">
+                    <img onclick="back();" id="iconmenu" src="images/espalda.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+                <p class="ptitle">Devoluciones</p>
+            </div>
+
+
+
+
+
+
+            <div class="col-md-2">
+                <div class="text-right" id="divbtnside">
+                    <a href="#" data-activates='menu' class="button-collapse">
+                        <img id="iconmenu" src="images/menu.png" ; alt="">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3"></div>
+            <div id="divformdev" class="col-md-6">
+                
+                <p id="pformdev">Devoluciones</p>
+                <p id="psformdev">Complete el siguiente formulario para registrar una venta no realizada.</p>
+                <hr>
+
+                <form action="">
+                    <div class="form-group">
+                        <label class="labelform">Usuario</label>
+                        <input type="text" class="form-control inputformdev" id="userdev" name="userdev" readonly value="Velen" required>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="labelform">Concepto</label>
+                        <input type="text" class="form-control inputformdev" id="conceptodev" name="conceptodev" required>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="labelform">Importe</label>
+                        <input type="number" class="form-control inputformdev" id="importedev" name="importedev" placeholder="$" required>
+                        
+                    </div>
+                    
+                    
+                    <button type="submit" class="btn btn-primary btnformdev">Aceptar</button>
+
+
+
+                </form>
+
+
+
+            </div>
+            <div class="col-md-3"></div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script src="js/sidenav.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/devoluciones.js"></script>
+    <script src="js/ventas.js"></script>
+
+</body>
+
+</html>

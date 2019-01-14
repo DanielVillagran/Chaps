@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vender, Chap's</title>
+    <title>Ventas, Chap's</title>
 
     <!--========================VENDOR================================================================-->
     <link rel="stylesheet" href="css/materialize.min.css">
@@ -30,10 +30,11 @@
             <center>
                 <img id="imgsidenav" src="images/logochaps.PNG" alt="">
             </center>
-            <li> <a href="menu.html">Inicio</a></li>
-            <li> <a href="aboutme.html">Vender</a></li>
-            <li><a href="services.html">Ventas</a></li>
-            <li><a href="portafolio.html">Cerrar sesón</a></li>
+            <li> <a href="inicio.html"><img class="iconsidenav" src="images/iconinicio.png" alt="">Inicio</a></li>
+            <li> <a onclick="iniciovender();"><img class="iconsidenav" src="images/iconvender.png" alt="">Vender</a></li>
+            <li><a onclick="inicioventas();"><img class="iconsidenav" src="images/iconventas2.png" alt="">Mis ventas</a></li>
+            <li><a href="devoluciones.html"><img class="iconsidenav" src="images/icondevoluciones.png" alt="">Devoluciones</a></li>
+            <li><a onclick="logout();"><img class="iconsidenav" src="images/iconcerrarsesion.png" alt="">Cerrar sesón</a></li>
 
 
         </ul>
@@ -55,6 +56,11 @@
                 <p class="ptitle">Mis ventas</p>
             </div>
 
+
+
+
+
+
             <div class="col-md-2">
                 <div class="text-right" id="divbtnside">
                     <a href="#" data-activates='menu' class="button-collapse">
@@ -72,14 +78,17 @@
 
     <div class="container">
         <div id="rowventas" class="row">
-            <div class="col-md-6">
-                <input type="text" class="form-control inputsearchventas" placeholder="Buscar ventas">
 
-
+            <div class="col-md-3">
+                <p id="ptotalve">Total:</p>
+                <b id="ptotalventas">$1,599.00</b>
             </div>
 
             <div class="col-md-6">
+                <input type="text" class="form-control inputsearchventas" placeholder="Buscar ventas">
+            </div>
 
+            <div class="col-md-3">
                 <a onclick="corte(1)" class="btn btn-primary btncorte"><img id="iconbtnagregar" src="images/iconcorte2.png" alt=""> <span>Corte de caja</span></a>
 
             </div>
@@ -94,7 +103,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                     </tbody>
                 </table>
             </div>
