@@ -13,6 +13,7 @@
   <link href="plugins/dist/css/skins/skin-blue-light.min.css" rel="stylesheet" type="text/css" />
   <link href="plugins/dist/css/skins/skin-green-light.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
