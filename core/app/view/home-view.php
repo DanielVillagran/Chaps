@@ -22,7 +22,7 @@ if(Core::$user->kind==3){ Core::redir("./?view=sell"); }
   }*/
 ?>
   <section class="content-header">
-    <h1>Paleteria/Neveria Chap's</h1>
+    <h1>Helados y Paletas Chap's</h1>
     <h4>Almacen principal: <?php echo StockData::getPrincipal()->name;  ?></h4>
   </section>
 

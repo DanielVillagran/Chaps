@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Paleteria Chap's | Panel de Administracion</title>
+  <title>Helados Chap's | Panel de Administracion</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.4 -->
   <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -52,7 +52,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>P</b>C</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Paleteria</b> Chap's</span>
+            <span class="logo-lg">Helados Chap's</span>
           </a>
 
           <!-- Header Navbar -->
