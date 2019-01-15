@@ -303,6 +303,7 @@
             </div>
             <div class="row">
 
+
               <div class="col-xs-12">
                 <button type="submit" class="btn btn-primary btn-block btn-flat">Acceder</button>
                 <a href="./" class="btn btn-default btn-block btn-flat"><i class="fa fa-arrow-left"></i> Regresar</a>
@@ -313,24 +314,27 @@
       </div><!-- /.login-box -->  
       <?php else:?>
         <div class="login-box">
-          <div class="login-logo">
-            <a href="./"><b><img style="width: 80%;" src="logo.png"></a>
-            </div><!-- /.login-logo -->
             <div class="login-box-body">
-              <center><h4>Admin</h4></center>
+            <center>
+             <img style="width: 80px;" src="logo.png" alt="">
+             <p id="plogin">Administrador</p>
+             </center>
               <form action="./?action=processlogin" method="post">
                 <div class="form-group has-feedback">
-                  <input type="text" name="username" required class="form-control" placeholder="Usuario"/>
-                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                  <input type="text" name="username" required class="form-control inputlogin" placeholder="Usuario"/>
+                  
                 </div>
                 <div class="form-group has-feedback">
-                  <input type="password" name="password" required class="form-control" placeholder="Password"/>
-                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  <input type="password" name="password" required class="form-control inputlogin" placeholder="Contraseña"/>
+                  
                 </div>
                 <div class="row">
 
                   <div class="col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Acceder</button>
+                   
+                   <center>
+                    <button type="submit" class="btnlogin">Acceder</button>
+                    </center>
                     <!--            <a href="./?view=clientaccess" class="btn btn-default btn-block btn-flat">Acceso al cliente <i class="fa fa-arrow-right"></i> </a> -->
                   </div><!-- /.col -->
                 </div>

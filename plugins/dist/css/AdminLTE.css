@@ -28,12 +28,8 @@ body {
 }
 /* Layout */
 .wrapper {
-  min-height: 100%;
-  position: relative;
-  background-image: url(images.jpg);
-  background-repeat: no-repeat!important;
-  background-size: auto!important;
-  overflow: hidden!important;
+  background-color: #00AC70;
+  
 }
 .wrapper:before,
 .wrapper:after {
@@ -44,7 +40,6 @@ body {
   clear: both;
 }
 .layout-boxed .wrapper {
-  max-width: 1250px;
   margin: 0 auto;
   min-height: 100%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -3043,9 +3038,78 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
-  background-image: url(back2.jpg);
+  background: #00AC70;
 }
+
+.inputlogin {
+    margin-top: 16px;
+    background-color: #EBEBEB;
+    border-radius: 100px!important;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Open Sans";
+    color: black;
+    transition: .5s;
+
+}
+
+.inputlogin::placeholder {
+    color: rgba(0, 0, 0, .6);
+}
+
+.inputlogin:focus,
+.inputlogin:active {
+    box-shadow: 0 9px 30px 0 rgba(0, 154, 86, 0.3);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+  background-color: white;
+  
+  
+
+}
+
+.btnlogin {
+    border: none;
+    font-family: "Open Sans";
+    font-size: 15px;
+    margin-top: 20px;
+    width: 55%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient(90deg, #009A56, #55BB8E);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btnlogin:hover {
+    background: white;
+    color: #009A56;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+#plogin {
+    margin-top: 15px;
+    font-family: "Open Sans";
+    font-size: 18px;
+
+}
+
+
+.login-box-body{
+  border-radius: 20px;
+  padding: 40px!important;
+  box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+
+}
+
 .login-box,
 .register-box {
   width: 360px;
