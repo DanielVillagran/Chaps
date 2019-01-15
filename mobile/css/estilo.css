@@ -236,6 +236,7 @@
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
+    border-top-right-radius: 20px;
 }
 
 #pcarrito {
@@ -275,8 +276,8 @@
 
 .pitemproducto {
     margin-top: 10px;
-    font-family: "Gilroy Bold";
-    font-size: 23px;
+    font-family: "Open Sans";
+    font-size: 19px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -374,7 +375,6 @@
 
 #totalcarrito {
     padding: 10px;
-    border: 2px solid white;
     color: white;
     margin-left: 10px;
     border-radius: 10px;
