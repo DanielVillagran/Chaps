@@ -21,3 +21,8 @@ function inicioventas() {
 
  window.location.href= 'ventas.html?id='+userid+'&stock='+stock;
 }
+
+function iniciodevoluciones() {
+
+ window.location.href= 'devoluciones.html';
+}
