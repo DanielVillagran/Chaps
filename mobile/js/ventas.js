@@ -23,6 +23,8 @@ $(document).ready(function(){
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
 				total=data.total;
+				total=data.total;
+				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
 			}
 		});
 });
@@ -61,6 +63,8 @@ function corte(){
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
 				total=data.total;
+				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
+				
 			}
 		});
 			}

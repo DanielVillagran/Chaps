@@ -24,5 +24,5 @@ function inicioventas() {
 
 function iniciodevoluciones() {
 
- window.location.href= 'devoluciones.html';
+ window.location.href= "devoluciones.html?id="+userid+"&name="+username+"&stock="+stock;
 }
