@@ -20,6 +20,20 @@ $(document).ready(function(){
 			}
 		});
 });
+$("#buscar").change(function(){
+	$.ajax({
+		url: server+"/webserviceapp/get_products.php",
+		type: "POST",
+		data: "product": $("#buscar").val();
+		dataType: "json",
+		success: function(data) {
+				//console.log(data);
+				console.log(data);
+				$("#rowproductos").empty().append(data.list);
+			}
+		});
+
+});
 function logout(){
 	window.location.replace("index.html");
 }
