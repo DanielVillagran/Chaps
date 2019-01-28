@@ -1,4 +1,4 @@
-var server="http://localhost/RepositorioChaps";
+var server="http://brayammorando.com/Chaps";
 $(document).ready(function(){
 	$("#login").click(function(){
 		$.ajax({

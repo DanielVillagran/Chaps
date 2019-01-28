@@ -1,4 +1,4 @@
-var server="http://localhost/RepositorioChaps";
+var server="http://brayammorando.com/Chaps";
 var username="";
 var userid="";
 var cuenta=0;
