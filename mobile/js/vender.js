@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 var username="";
 var userid="";
 var cuenta=0;
@@ -12,6 +12,7 @@ $(document).ready(function(){
 	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
+		data: {"product": ""},
 		dataType: "json",
 		success: function(data) {
 				//console.log(data);
