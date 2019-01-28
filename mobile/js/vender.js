@@ -24,7 +24,7 @@ $("#buscar").change(function(){
 	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
-		data: "product": $("#buscar").val();
+		data: "product": $("#buscar").val(),
 		dataType: "json",
 		success: function(data) {
 				//console.log(data);
