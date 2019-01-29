@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 var username="";
 var userid="";
 var cuenta=0;
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			}
 		});
 });
-$("#buscar").keypress(function(){
+$("#buscar").keyup(function(event){
 	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",

@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 var username="";
 var userid="";
 var cuenta=0;
@@ -29,7 +29,7 @@ $(document).ready(function(){
 			}
 		});
 });
-$("#buscar").keyup(function(){
+$("#buscar").keyup(function(event){
 	$.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
@@ -43,9 +43,6 @@ $("#buscar").keyup(function(){
 				//console.log(data);
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
-				total=data.total;
-				total=data.total;
-				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
 			}
 		});
 
@@ -65,7 +62,7 @@ function corte(){
 			var countrows = $('#tablamisventas tr').length;
 			var rows = countrows - 1;
 
-			if (rows == 0) {
+			if (total== 0) {
 
 				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
 
@@ -83,6 +80,9 @@ function corte(){
 				console.log(data);
 				swal("<p id='pswal'>Corte Realizado</p>", "<p id='psswal'> La cantidad todal vendida es de : <br> <b id='psbswal'>$" + parseFloat(total).toFixed(2) + ".<sup id='supswal'>00</sup></b></p>", "success");
 				//$("#tablamisventas > tbody").empty().append(data.lista);
+				//$("#tablamisventas > tbody").empty().append(data.lista);
+				total=0;
+				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
 				$.ajax({
 					url: server+"/webserviceapp/get_sales.php",
 					type: "POST",
@@ -95,7 +95,7 @@ function corte(){
 				//console.log(data);
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
-				total=data.total;
+				total=0;
 				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
 				
 			}
