@@ -51,23 +51,34 @@ $("#buscar").keypress(function(){
 
 });
 function corte(){
-	var countrows = $('#tablamisventas tr').length;
-	var rows = countrows - 1;
+	swal({
 
-	if (rows == 0) {
+		type: 'info',
+		title: "<p id='prealizarventa'>Realizar Corte de caja</i>",
+		html: "<p id='psswal'>¿Estas seguro?</p>",
+		input: 'text',
+		confirmButtonText: 'Aceptar',
+		showCancelButton: true,
+		cancelButtonText: 'Cancelar',
 
-		swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
+	}).then((result) => {
+		var countrows = $('#tablamisventas tr').length;
+		var rows = countrows - 1;
 
-	} else {
-		$.ajax({
-			url: server+"/webserviceapp/corte.php",
-			type: "POST",
-			data: {
-				'stock_id':stock,
-				'user_id':userid
-			},
-			dataType: "json",
-			success: function(data) {
+		if (rows == 0) {
+
+			swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
+
+		} else {
+			$.ajax({
+				url: server+"/webserviceapp/corte.php",
+				type: "POST",
+				data: {
+					'stock_id':stock,
+					'user_id':userid
+				},
+				dataType: "json",
+				success: function(data) {
 				//console.log(data);
 				console.log(data);
 				swal("<p id='pswal'>Corte Realizado</p>", "<p id='psswal'> La cantidad todal vendida es de : <br> <b id='psbswal'>$" + parseFloat(total).toFixed(2) + ".<sup id='supswal'>00</sup></b></p>", "success");
@@ -91,7 +102,8 @@ function corte(){
 		});
 			}
 		});
-	}
+		}
+	});
 
 }
 
