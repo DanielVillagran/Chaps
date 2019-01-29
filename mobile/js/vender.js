@@ -21,7 +21,7 @@ $(document).ready(function(){
 			}
 		});
 });
-$("#buscar").change(function(){
+$("#buscar").keypress(function(){
 	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",

@@ -15,7 +15,8 @@ $(document).ready(function(){
 		type: "POST",
 		data: {
 			'stock_id':stock,
-			'user_id':userid
+			'user_id':userid,
+			"product": $("#buscar").val()
 		},
 		dataType: "json",
 		success: function(data) {
@@ -27,6 +28,27 @@ $(document).ready(function(){
 				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
 			}
 		});
+});
+$("#buscar").keypress(function(){
+	$.ajax({
+		url: server+"/webserviceapp/get_sales.php",
+		type: "POST",
+		data: {
+			'stock_id':stock,
+			'user_id':userid,
+			"product": $("#buscar").val()
+		},
+		dataType: "json",
+		success: function(data) {
+				//console.log(data);
+				console.log(data);
+				$("#tablamisventas > tbody").empty().append(data.lista);
+				total=data.total;
+				total=data.total;
+				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
+			}
+		});
+
 });
 function corte(){
 	var countrows = $('#tablamisventas tr').length;
