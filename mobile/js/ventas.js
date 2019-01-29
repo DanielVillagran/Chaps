@@ -29,7 +29,7 @@ $(document).ready(function(){
 			}
 		});
 });
-$("#buscar").keypress(function(){
+$("#buscar").keyup(function(){
 	$.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
@@ -52,33 +52,33 @@ $("#buscar").keypress(function(){
 });
 function corte(){
 	swal({
-
-		type: 'info',
-		title: "<p id='prealizarventa'>Realizar Corte de caja</i>",
-		html: "<p id='psswal'>¿Estas seguro?</p>",
-		input: 'text',
-		confirmButtonText: 'Aceptar',
+		title: "<p id='pswalerror'>Corte de caja</p>",
+		html: "<p id='psswalerror'>Deseas realizar el corte de caja?</p>",
+		type: 'warning',
 		showCancelButton: true,
+		confirmButtonColor: '#0066D1',
+		cancelButtonColor: '#d33',
+		confirmButtonText: 'Aceptar',
 		cancelButtonText: 'Cancelar',
-
 	}).then((result) => {
-		var countrows = $('#tablamisventas tr').length;
-		var rows = countrows - 1;
+		if (result.value) {
+			var countrows = $('#tablamisventas tr').length;
+			var rows = countrows - 1;
 
-		if (rows == 0) {
+			if (rows == 0) {
 
-			swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
+				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
 
-		} else {
-			$.ajax({
-				url: server+"/webserviceapp/corte.php",
-				type: "POST",
-				data: {
-					'stock_id':stock,
-					'user_id':userid
-				},
-				dataType: "json",
-				success: function(data) {
+			} else {
+				$.ajax({
+					url: server+"/webserviceapp/corte.php",
+					type: "POST",
+					data: {
+						'stock_id':stock,
+						'user_id':userid
+					},
+					dataType: "json",
+					success: function(data) {
 				//console.log(data);
 				console.log(data);
 				swal("<p id='pswal'>Corte Realizado</p>", "<p id='psswal'> La cantidad todal vendida es de : <br> <b id='psbswal'>$" + parseFloat(total).toFixed(2) + ".<sup id='supswal'>00</sup></b></p>", "success");
@@ -102,8 +102,10 @@ function corte(){
 		});
 			}
 		});
+			}
 		}
 	});
+
 
 }
 
