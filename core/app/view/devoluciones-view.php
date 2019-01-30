@@ -42,7 +42,7 @@
         <td>#<?php echo $sell->id; ?></td>
 
         <td><?php echo $sell->concepto; ?></td>
-        <td><?php echo number_format($sell->importe,2,".",","); ?></td>
+        <td><?php echo "$".number_format($sell->importe,2,".",","); ?></td>
         <td><?php echo $sell->created_at; ?></td>
         <td><?php echo $sell->name; ?></td>
         <td style="width:120px;"><?php echo $sell->username; ?></td>
