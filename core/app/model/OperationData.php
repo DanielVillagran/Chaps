@@ -283,6 +283,12 @@ public static function getPPByDateOfficial($start,$end){
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new OperationData());
 	}
+	public static function getDevoluciones(){
+		$sql = "select devoluciones.*,stock.name,concat(user.name,' ',user.lastname) as username from devoluciones left join stock on stock.id=devoluciones.stock_id
+		left join user on devoluciones.user_id=user.id ";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new OperationData());
+	}
 
 ////////////////////////////////////////////////////////////////////////////
 

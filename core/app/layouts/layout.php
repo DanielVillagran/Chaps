@@ -193,6 +193,7 @@
             </li> -->
             <?php if(Core::$user->kind==1):?>
               <li><a href="./?view=products"><i class='fa fa-cutlery'></i> <span>Productos</span></a></li>
+              <li><a href="./?view=devoluciones"><i class='fa fa-reply'></i> <span>Devoluciones</span></a></li>
               <li><a href="./?view=categories"><i class='fa fa-sitemap'></i> <span>Categorias</span></a></li>
               <li><a href="./?view=stocks"><i class='fa fa-building'></i> <span>Almacenes</span></a></li>
               <li><a href="./?view=boxhistory"><i class='fa fa-briefcase'></i><span>Cortes de Caja</span></a></li>
