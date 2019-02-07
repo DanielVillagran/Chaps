@@ -30,7 +30,7 @@
             <center>
                 <img id="imgsidenav" src="images/logochaps.PNG" alt="">
             </center>
-             <li> <a href="inicio.html"><img class="iconsidenav" src="images/iconinicio.png" alt="">Inicio</a></li>
+            <li> <a href="inicio.html"><img class="iconsidenav" src="images/iconinicio.png" alt="">Inicio</a></li>
             <li> <a onclick="iniciovender();"><img class="iconsidenav" src="images/iconvender.png" alt="">Vender</a></li>
             <li><a onclick="inicioventas();"><img class="iconsidenav" src="images/iconventas2.png" alt="">Mis ventas</a></li>
             <li><a href="devoluciones.html"><img class="iconsidenav" src="images/icondevoluciones.png" alt="">Devoluciones</a></li>
@@ -84,8 +84,22 @@
             </div>
 
             <div class="col-md-4">
+
                 <div id="divcarrito">
-                    <p id="pcarrito">Carrito</p>
+
+                    <div id="divc1">
+
+                        <div id="divc2">
+                            <p id="pcarrito">Carrito</p>
+
+                        </div>
+                        <div id="divc3">
+                            <p id="ptotal">Total <b id="totalcarrito">$00.00</b></p>
+                        </div>
+
+                    </div>
+
+
 
 
                     <div class="table-responsive">
@@ -108,7 +122,6 @@
 
                     <div id="divtotal">
 
-                        <p id="ptotal">Total <b id="totalcarrito">$00.00</b></p>
                         <button class="btncobrar" type="button" onclick="sale()">Cobrar</button>
 
                     </div>

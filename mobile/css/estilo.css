@@ -69,15 +69,14 @@
 .divcenter {
     background-color: white;
     height: 53%;
-    margin: auto;
-    position: absolute;
+    margin-top: 140px;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     border-radius: 20px;
     padding-top: 36px;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
     padding-left: 40px;
     padding-right: 40px;
     box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
@@ -95,8 +94,8 @@
     width: 100%;
     font-size: 15px;
     border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     padding-left: 20px;
     padding-right: 20px;
     font-family: "Open Sans";
@@ -121,9 +120,9 @@
     font-family: "Open Sans";
     font-size: 15px;
     margin-top: 25px;
-    width: 50.4%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 50.5%;
+    padding-top: 13px;
+    padding-bottom: 13px;
     border-radius: 100px;
     color: white;
     background: linear-gradient(90deg, #009A56, #55BB8E);
@@ -200,7 +199,7 @@
 #divinfoinicio {
     display: flex;
     padding-left: 100px;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 
 #divpinicio {
@@ -284,7 +283,7 @@
 
 #rowproductos {
     overflow-y: auto;
-    height: 74vh;
+    height: 73.9vh;
 
 }
 
@@ -305,7 +304,7 @@
 #tablacarrito td {
     font-family: "Open Sans";
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
@@ -352,7 +351,8 @@
 }
 
 
-#tablacarrito thead, #tablacarrito tbody {
+#tablacarrito thead,
+#tablacarrito tbody {
     display: block;
 }
 
@@ -374,6 +374,7 @@
 }
 
 #totalcarrito {
+    font-size: 25px;
     padding: 10px;
     color: white;
     margin-left: 10px;
@@ -385,21 +386,21 @@
 }
 
 #divtotal {
-    padding-top: 30px;
-    text-align: right;
+    padding-top: 10px;
+    text-align: center;
     padding-right: 10px;
 }
 
 .btncobrar {
-    margin-top: 12px;
-    font-family: "Open Sans";
-    font-size: 20px;
+
+    font-family: "Open Sans Semi Bold";
+    font-size: 22px;
     color: #00C69D;
     background-color: white;
     border: none;
     border-radius: 10px;
-    width: 100px;
-    padding: 10px;
+    width: 300px;
+    padding: 15px;
     box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.11);
 }
 
@@ -523,7 +524,8 @@
 
 }
 
-#tablamisventas thead, #tablamisventas tbody {
+#tablamisventas thead,
+#tablamisventas tbody {
     display: block;
 }
 
@@ -534,19 +536,20 @@
     overflow-x: hidden;
 }
 
-#tablamisventas th{
+#tablamisventas th {
     font-family: "Open Sans";
     font-size: 17px;
     width: 40vh;
     padding: 16px;
 }
 
-#tablamisventas td{
+#tablamisventas td {
     padding-left: 16px;
     font-family: "Open Sans";
     font-size: 15px;
     width: 40vh;
 }
+
 #tablamisventas > tbody > tr:nth-child(2n+1) > td,
 #tablamisventas > tbody > tr:nth-child(2n+1) > th {
     background-color: rgba(0, 193, 145, .08);
@@ -576,7 +579,7 @@
     letter-spacing: -.2px;
 }
 
-#ptotalve{
+#ptotalve {
     color: black;
     font-size: 19px;
     text-align: left;
@@ -586,39 +589,39 @@
     margin-bottom: -9px;
 }
 
-.iconsidenav{
+.iconsidenav {
     width: 2.6vh;
     margin-right: 16px;
     margin-top: -4px;
-    
+
 }
 
-#divformdev{
+#divformdev {
     border-radius: 20px;
     background-color: white;
     padding: 70px;
     box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
 }
 
-#pformdev{
+#pformdev {
     font-family: "Open Sans Semi Bold";
     font-size: 26px;
     color: black;
 }
 
-#psformdev{
+#psformdev {
     font-family: "Open Sans";
     font-size: 13px;
     margin-top: -15px;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, .6);
 }
 
-.labelform{
+.labelform {
     font-family: "Open Sans";
     font-size: 14px;
 }
 
-.inputformdev{
+.inputformdev {
     font-family: "Open Sans";
     font-size: 14px;
     padding-top: 10px;
@@ -663,7 +666,53 @@
 }
 
 
-#wow{
+#wow {
     font-size: 10px;
+}
+
+
+#divc1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#divc3 {
+    margin-top: 4px;
+}
+
+
+#pswal {
+    font-family: "Open Sans";
+    color: #32C463;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+#psswal {
+    margin-top: -17px;
+    font-family: "Open Sans";
+    font-size: 22px;
+}
+
+#psbswal {
+    font-family: "Open Sans Bold";
+    font-size: 40px;
+
+}
+
+#supswal {
+    font-size: 24px;
+
+}
+
+#pswalerror {
+    font-family: "Open Sans Semi Bold";
+    font-size: 34px;
+}
+
+#psswalerror {
+    margin-top: -17px;
+    font-family: "Open Sans";
+    font-size: 19px;
 }
 

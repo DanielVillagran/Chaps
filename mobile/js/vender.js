@@ -53,7 +53,7 @@ function sale(){
 			type: 'info',
 			title: "<p id='prealizarventa'>Realizar Venta</i>",
 			html: "<p id='psswal'>¿Cantidad recibida?</p>",
-			input: 'text',
+			input: 'number',
 			confirmButtonText: 'Aceptar',
 			showCancelButton: true,
 			cancelButtonText: 'Cancelar',

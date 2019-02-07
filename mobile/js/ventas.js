@@ -64,7 +64,7 @@ function corte(){
 
 			if (total== 0) {
 
-				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta, por favor vuelva a intentarlo.</p>", "info");
+				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta.</p>", "info");
 
 			} else {
 				$.ajax({
@@ -78,7 +78,7 @@ function corte(){
 					success: function(data) {
 				//console.log(data);
 				console.log(data);
-				swal("<p id='pswal'>Corte Realizado</p>", "<p id='psswal'> La cantidad todal vendida es de : <br> <b id='psbswal'>$" + parseFloat(total).toFixed(2) + ".<sup id='supswal'>00</sup></b></p>", "success");
+				swal("<p id='pswal'>Corte Realizado</p>", "<p id='psswal'> La cantidad todal vendida es de : <br> <b id='psbswal'>$" + parseFloat(total).toFixed(2) + "</b></p>", "success");
 				//$("#tablamisventas > tbody").empty().append(data.lista);
 				//$("#tablamisventas > tbody").empty().append(data.lista);
 				total=0;
