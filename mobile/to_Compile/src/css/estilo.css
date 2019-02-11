@@ -1,0 +1,713 @@
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("../fonts/Gilroy-Bold.ttf");
+
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Semi Bold";
+    src: url("../fonts/OpenSans-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+
+#menu {
+    background-color: white;
+
+}
+
+#menu a {
+    font-size: 2.2vh;
+    color: rgba(0, 0, 0, .7);
+    font-family: "Open Sans";
+    text-decoration: none;
+}
+
+#menu li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#menu #icon {
+    width: 3.3vh;
+    margin-right: 2vh;
+    margin-top: -4px;
+}
+
+#imgsidenav {
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+    width: 40%;
+}
+
+#iconmenu {
+    width: 5vh;
+    cursor: pointer;
+}
+
+#navmenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bodylogin {
+    background-image: url(../images/backlogin.png);
+
+}
+
+
+.divcenter {
+    background-color: white;
+    margin-top: 140px;
+    border-radius: 20px;
+    padding-top: 36px;
+    padding-bottom: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+
+}
+
+#logologin {
+    width: 80px;
+}
+
+.inputlogin {
+    margin-top: 16px;
+    background-color: #EBEBEB;
+    border-radius: 100px;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Open Sans";
+    color: black;
+    transition: .5s;
+
+}
+
+.inputlogin::placeholder {
+    color: rgba(0, 0, 0, .6);
+}
+
+.inputlogin:focus,
+.inputlogin:active {
+    box-shadow: 0 9px 30px 0 rgba(0, 154, 86, 0.3);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+.btnlogin {
+    border: none;
+    font-family: "Open Sans";
+    font-size: 15px;
+    margin-top: 25px;
+    width: 50.5%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient(90deg, #009A56, #55BB8E);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.btnlogin:hover {
+    background: white;
+    color: #009A56;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+#plogin {
+    margin-top: 15px;
+    font-family: "Open Sans";
+    font-size: 18px;
+
+}
+
+
+#toplogin {
+    display: flex;
+    justify-content: space-between;
+}
+
+#divlogo {
+    margin-bottom: 20px;
+}
+
+#divbtnside {
+    padding-right: 30px;
+    padding-top: 30px;
+
+}
+
+#divbtnback {
+    padding-left: 23px;
+    padding-top: 29px;
+}
+
+#pbienvenida {
+    color: white;
+    font-family: "Open Sans";
+    font-size: 30px;
+    letter-spacing: .2px;
+}
+
+.divmenu {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+}
+
+#rowmenuitems {
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+#pitemmenu {
+    font-family: "Gilroy Bold";
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+#divinfoinicio {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 35px;
+}
+
+#divpinicio {
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#imgmascotainicio {
+    width: 80px;
+}
+
+.imgiteminicio {
+    width: 45%;
+
+}
+
+.ptitle {
+    color: white;
+    font-size: 40px;
+    font-family: "Gilroy Bold";
+    letter-spacing: .2px;
+    padding-right: 30px;
+    text-align: left;
+    padding-top: 20px;
+    margin-left: -79px;
+
+}
+
+
+#divprodcutos {
+    background-color: #F6FAFC;
+    border-radius: 0px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top-right-radius: 20px;
+}
+
+#pcarrito {
+    color: white;
+    text-align: left;
+    font-size: 30px;
+    font-family: "Gilroy Bold";
+    letter-spacing: .2px;
+    padding-left: 10px;
+}
+
+.divitemproducto {
+    margin-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -1px 10px 35px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+#sombras {
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+#sombras:hover {
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+}
+
+#imgproducto {
+    width: 50%;
+    padding-top: 10px;
+}
+
+.pitemproducto {
+    margin-top: 10px;
+    font-family: "Open Sans";
+    font-size: 19px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#rowproductos {
+    overflow-y: auto;
+    height: 73.9vh;
+
+}
+
+#bodylogin {
+    height: 100%;
+
+}
+
+#tablacarrito th {
+    color: white;
+    font-family: "Open Sans Bold";
+    font-weight: normal;
+    font-size: 15px;
+    border: none;
+
+}
+
+#tablacarrito td {
+    font-family: "Open Sans";
+    color: white;
+    font-size: 17px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+
+
+}
+
+#thproducto {
+    padding-left: 10px;
+    width: 190px;
+}
+
+#thprecio {
+    text-align: center;
+    width: 100px;
+
+}
+
+#thborrar {
+    text-align: center;
+
+
+}
+
+.tdproducto {
+    padding-left: 10px;
+    width: 190px;
+}
+
+.tdprecio {
+    text-align: center;
+    width: 100px;
+
+}
+
+.tdborrar {
+    text-align: center;
+    width: 70px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td,
+.table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(0, 0, 0, .04);
+}
+
+
+#tablacarrito thead,
+#tablacarrito tbody {
+    display: block;
+}
+
+#tablacarrito tbody {
+    width: 100%;
+    height: 49vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#iconborrar {
+    width: 30px;
+}
+
+#ptotal {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: white;
+}
+
+#totalcarrito {
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-family: "Open Sans Semi Bold";
+    font-weight: normal;
+
+}
+
+#divtotal {
+    padding-top: 10px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.btncobrar {
+
+    font-family: "Open Sans Semi Bold";
+    font-size: 22px;
+    color: #00C69D;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btncobrar:focus,
+.btncobrar:active {
+    background-color: white;
+    outline: none;
+}
+
+.inputsearchpro {
+    padding-left: 35px !important;
+    padding-right: 65px !important;
+    border-radius: 100px !important;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    width: 50%;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+    font-size: 17px;
+    background-image: url(../images/iconsearch.png);
+    background-position: right;
+    background-size: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: "Open Sans";
+    letter-spacing: .1px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+
+.inputsearchpro:focus {
+
+    box-shadow: 0 3px 40px 0 rgba(0, 0, 0, .15), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    color: #00663B;
+}
+
+.inputsearchventas {
+    padding-left: 25px !important;
+    padding-right: 65px !important;
+    border-radius: 100px !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 100%;
+    box-shadow: 0 3px 100px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
+    font-size: 18px;
+    background-image: url(../images/iconsearch.png);
+    background-position: right;
+    background-size: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: "Open Sans";
+    letter-spacing: .1px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+
+.inputsearchventas:focus {
+
+    box-shadow: 0 3px 40px 0 rgba(0, 0, 0, .15), 0 6px 20px 0 rgba(0, 0, 0, 0) !important;
+    color: #00663B;
+}
+
+#rowventas {
+    padding-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.btncorte {
+    float: right;
+    border: none;
+    width: 100%;
+    border-radius: 100px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    background: #00C092;
+    color: rgba(255, 255, 255, .8) !important;
+    opacity: .85;
+    transition: 1s;
+    font-family: "Open Sans";
+
+
+}
+
+.btncorte:hover {
+
+    background: #009B50;
+    color: rgba(255, 255, 255, 1) !important;
+    opacity: 1;
+    transition: 1s;
+
+
+}
+
+.btncorte:active,
+.btncorte:focus {
+
+    background: #009B50 !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+#iconbtnagregar {
+    width: 20px;
+    margin-top: -4px;
+    margin-right: 3px;
+    opacity: .9;
+
+}
+
+#tablamisventas thead,
+#tablamisventas tbody {
+    display: block;
+}
+
+#tablamisventas tbody {
+    width: 100%;
+    height: 53vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#tablamisventas th {
+    font-family: "Open Sans";
+    font-size: 17px;
+    width: 40vh;
+    padding: 16px;
+}
+
+#tablamisventas td {
+    padding-left: 16px;
+    font-family: "Open Sans";
+    font-size: 15px;
+    width: 40vh;
+}
+
+#tablamisventas > tbody > tr:nth-child(2n+1) > td,
+#tablamisventas > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(0, 193, 145, .08);
+}
+
+.swal2-popup {
+    font-size: 1.2rem !important;
+    padding-bottom: 35px !important;
+    padding-top: 17px !important;
+    font-family: "Open Sans";
+}
+
+.swal2-input {
+    text-align: center;
+    font-family: "Open Sans Bold" !important;
+    font-size: 28px !important;
+    color: black !important;
+    width: 90% !important;
+    margin-bottom: 0px !important;
+}
+
+#ptotalventas {
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    font-family: "Open Sans Semi Bold";
+    letter-spacing: -.2px;
+}
+
+#ptotalve {
+    color: black;
+    font-size: 19px;
+    text-align: left;
+    font-family: "Open Sans";
+    letter-spacing: -.2px;
+    margin-top: -3px;
+    margin-bottom: -9px;
+}
+
+.iconsidenav {
+    width: 2.6vh;
+    margin-right: 16px;
+    margin-top: -4px;
+
+}
+
+#divformdev {
+    border-radius: 20px;
+    background-color: white;
+    padding: 70px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 0.11);
+}
+
+#pformdev {
+    font-family: "Open Sans Semi Bold";
+    font-size: 26px;
+    color: black;
+}
+
+#psformdev {
+    font-family: "Open Sans";
+    font-size: 13px;
+    margin-top: -15px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.labelform {
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+.inputformdev {
+    font-family: "Open Sans";
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.btnformdev {
+    border: none;
+    width: 50%;
+    border-radius: 100px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    background: #00C092;
+    color: rgba(255, 255, 255, .8) !important;
+    opacity: .85;
+    transition: 1s;
+    font-family: "Open Sans";
+    margin-top: 15px;
+
+
+}
+
+.btnformdev:hover {
+
+    background: #009B50;
+    color: rgba(255, 255, 255, 1) !important;
+    opacity: 1;
+    transition: 1s;
+
+
+}
+
+.btnformdev:active,
+.btnformdev:focus {
+
+    background: #009B50 !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+#wow {
+    font-size: 10px;
+}
+
+
+#divc1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#divc3 {
+    margin-top: 4px;
+}
+
+
+#pswal {
+    font-family: "Open Sans";
+    color: #32C463;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+#psswal {
+    margin-top: -17px;
+    font-family: "Open Sans";
+    font-size: 22px;
+}
+
+#psbswal {
+    font-family: "Open Sans Bold";
+    font-size: 40px;
+
+}
+
+#supswal {
+    font-size: 24px;
+
+}
+
+#pswalerror {
+    font-family: "Open Sans Semi Bold";
+    font-size: 34px;
+}
+
+#psswalerror {
+    margin-top: -17px;
+    font-family: "Open Sans";
+    font-size: 19px;
+}
+

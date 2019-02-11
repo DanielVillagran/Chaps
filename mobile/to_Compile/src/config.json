@@ -1,0 +1,45 @@
+{
+	"config_version": "4",
+	"name": "Paleteria Chap's",
+	"author": "ovillagrana@ant.com.mx",
+	"version": "0.1",
+	"platform_version": "v2.7.5",
+	"description": "An empty app created by default",
+	"core": {
+		"general": {
+			"logging": {
+				"level": "DEBUG"
+			},
+			"reload": true
+		}
+	},
+	"modules": {
+		"display": {
+			"version": "2.10",
+			"config": {
+				"orientations": {
+					"ipad": "any",
+					"android": "landscape",
+					"iphone": "any"
+				},
+				"fullscreen": {}
+			}
+		},
+		"request": {
+			"version": "2.10.1",
+			"config": {}
+		},
+		"icons": {
+			"version": "2.9",
+			"config": {
+				"android": {
+					"48": "icons/48x48.jpg",
+					"72": "icons/72x72.jpg",
+					"96": "icons/96x96.jpg",
+					"144": "icons/144x144.jpg",
+					"192": "icons/192x192.jpg"
+				}
+			}
+		}
+	}
+}
