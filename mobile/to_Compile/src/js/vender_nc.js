@@ -189,8 +189,11 @@ function inicioinicio(){
 						$('#swal-input1').focus()
 					}
 				}).then(function (resultado) {
-					console.log();
-
+					swal({
+						title: "Cargando...",
+						showConfirmButton: false,
+						imageUrl: "loader.gif"
+					});
 					forge.request.ajax({
 						url: server+"/webserviceapp/login_process.php",
 						type: "POST",
@@ -200,11 +203,7 @@ function inicioinicio(){
 						},
 						dataType: "json",
 						beforeSend: function() {
-							swal({
-								title: "Cargando...",
-								showConfirmButton: false,
-								imageUrl: "loader.gif"
-							});
+							
 						},
 						success: function(datauser) {
 							swal.close();
