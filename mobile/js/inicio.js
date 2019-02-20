@@ -15,14 +15,17 @@ function logout(){
 }
 function iniciovender() {
 
- window.location.href= 'vender.html?id='+userid+'&stock='+stock;
+ window.location.href= "vender.html?id="+userid+"&name="+username+"&stock="+stock;
 }
 function inicioventas() {
 
- window.location.href= 'ventas.html?id='+userid+'&stock='+stock;
+ window.location.href= "ventas.html?id="+userid+"&name="+username+"&stock="+stock;
 }
 
 function iniciodevoluciones() {
 
  window.location.href= "devoluciones.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+function inicioinicio(){
+	 window.location.href= "inicio.html?id="+userid+"&name="+username+"&stock="+stock;
 }

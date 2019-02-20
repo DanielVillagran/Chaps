@@ -1,7 +1,7 @@
 var server="http://brayammorando.com/Chaps";
 $(document).ready(function(){
 	$("#login").click(function(){
-		$.ajax({
+		forge.request.ajax({
 			url: server+"/webserviceapp/login_process.php",
 			type: "POST",
 			data: {
@@ -9,6 +9,13 @@ $(document).ready(function(){
 				password:$("#passlogin").val()
 			},
 			dataType: "json",
+			beforeSend: function() {
+				swal({
+					title: "Cargando",
+					showConfirmButton: false,
+					imageUrl: "/images/loader.gif"
+				});
+			},
 			success: function(data) {
 				console.log(data);
 				if(data==false){

@@ -7,10 +7,12 @@ var stock="";
 var total=0;
 $(document).ready(function(){
 	var url=window.location.href.split("?id=");
-	userid=url[1].split("&stock=")[0];
+	url=url[1].split("&name=");
+	username=url[1].split("&stock=")[0];
 	stock=url[1].split("&stock=")[1];
+	userid=url[0];
 	//$("#userinicio").empty().append(username);
-	$.ajax({
+	forge.request.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
 		data: {
@@ -19,7 +21,15 @@ $(document).ready(function(){
 			"product": $("#buscar").val()
 		},
 		dataType: "json",
+		beforeSend: function() {
+			swal({
+				title: "Cargando",
+				showConfirmButton: false,
+				imageUrl: "/images/loader.gif"
+			});
+		},
 		success: function(data) {
+			swal.close();
 				//console.log(data);
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
@@ -30,7 +40,7 @@ $(document).ready(function(){
 		});
 });
 $("#buscar").keyup(function(event){
-	$.ajax({
+	forge.request.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
 		data: {
@@ -39,7 +49,15 @@ $("#buscar").keyup(function(event){
 			"product": $("#buscar").val()
 		},
 		dataType: "json",
+		beforeSend: function() {
+			swal({
+				title: "Cargando",
+				showConfirmButton: false,
+				imageUrl: "/images/loader.gif"
+			});
+		},
 		success: function(data) {
+			swal.close();
 				//console.log(data);
 				console.log(data);
 				$("#tablamisventas > tbody").empty().append(data.lista);
@@ -67,7 +85,7 @@ function corte(){
 				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta.</p>", "info");
 
 			} else {
-				$.ajax({
+				forge.request.ajax({
 					url: server+"/webserviceapp/corte.php",
 					type: "POST",
 					data: {
@@ -83,7 +101,7 @@ function corte(){
 				//$("#tablamisventas > tbody").empty().append(data.lista);
 				total=0;
 				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
-				$.ajax({
+				forge.request.ajax({
 					url: server+"/webserviceapp/get_sales.php",
 					type: "POST",
 					data: {
@@ -109,10 +127,6 @@ function corte(){
 
 }
 
-function logout(){
-	window.location.replace("index.html");
-}
-
 function addCommas(nStr) {
 	nStr += '';
 	var x = nStr.split('.');
@@ -124,11 +138,22 @@ function addCommas(nStr) {
 	}
 	return x1 + x2;
 }
+function logout(){
+	window.location.replace("index.html");
+}
 function iniciovender() {
 
-	window.location.href= 'vender.html?id='+userid+'&stock='+stock;
+	window.location.href= "vender.html?id="+userid+"&name="+username+"&stock="+stock;
 }
 function inicioventas() {
 
-	window.location.href= 'ventas.html?id='+userid+'&stock='+stock;
+	window.location.href= "ventas.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+
+function iniciodevoluciones() {
+
+	window.location.href= "devoluciones.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+function inicioinicio(){
+	window.location.href= "inicio.html?id="+userid+"&name="+username+"&stock="+stock;
 }

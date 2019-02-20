@@ -21,7 +21,7 @@ $( "#form_devolucion" ).submit(function( event ) {
 	stock=url[1].split("&stock=")[1];
 	userid=url[0];
 	console.log(userid);
-	$.ajax({
+	forge.request.ajax({
 		url: server+"/webserviceapp/devolucion.php",
 		type: 'post',
 		async: false,
@@ -32,7 +32,15 @@ $( "#form_devolucion" ).submit(function( event ) {
 			'user_id':userid
 		},
 		dataType: 'html',
+		beforeSend(){
+			swal({
+				title: "Cargando",
+				showConfirmButton: false,
+				imageUrl: "/images/loader.gif"
+			});
+		},
 		success() {
+			swal.close();
 
 			swal("<p id='pswal'>Devolucion realizada</p>", "<p id='psswal'> El administrador sera notificado en breve.</p>", "success");
 
@@ -43,3 +51,22 @@ $( "#form_devolucion" ).submit(function( event ) {
 $('#importedev').on('input', function () { 
 	this.value = this.value.replace(/[^0-9]/g,'');
 });
+function logout(){
+	window.location.replace("index.html");
+}
+function iniciovender() {
+
+	window.location.href= "vender.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+function inicioventas() {
+
+	window.location.href= "ventas.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+
+function iniciodevoluciones() {
+
+	window.location.href= "devoluciones.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+function inicioinicio(){
+	window.location.href= "inicio.html?id="+userid+"&name="+username+"&stock="+stock;
+}

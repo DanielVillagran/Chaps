@@ -6,15 +6,25 @@ var contador=0;
 var stock="";
 $(document).ready(function(){
 	var url=window.location.href.split("?id=");
-	userid=url[1].split("&stock=")[0];
+	url=url[1].split("&name=");
+	username=url[1].split("&stock=")[0];
 	stock=url[1].split("&stock=")[1];
+	userid=url[0];
 	//$("#userinicio").empty().append(username);
-	$.ajax({
+	forge.request.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": ""},
 		dataType: "json",
+		beforeSend: function() {
+			swal({
+				title: "Cargando",
+				showConfirmButton: false,
+				imageUrl: "/images/loader.gif"
+			});
+		},
 		success: function(data) {
+			swal.close();
 				//console.log(data);
 				console.log(data);
 				$("#rowproductos").empty().append(data.list);
@@ -22,22 +32,27 @@ $(document).ready(function(){
 		});
 });
 $("#buscar").keyup(function(event){
-	$.ajax({
+	forge.request.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": $("#buscar").val()},
 		dataType: "json",
+		beforeSend: function() {
+			swal({
+				title: "Cargando",
+				showConfirmButton: false,
+				imageUrl: "/images/loader.gif"
+			});
+		},
 		success: function(data) {
 				//console.log(data);
+				swal.close();
 				console.log(data);
 				$("#rowproductos").empty().append(data.list);
 			}
 		});
 
 });
-function logout(){
-	window.location.replace("index.html");
-}
 function sale(){
 	var countrows = $('#tablacarrito tr').length;
 	var rows = countrows - 1;
@@ -85,7 +100,7 @@ function sale(){
 					product = product.trim();
 					price_out = $(this).find("td:eq(1)").text();
 					price_out = price_out.trim();
-					$.ajax({
+					forge.request.ajax({
 						url: server+"/webserviceapp/sale.php",
 						type: 'post',
 						async: false,
@@ -109,10 +124,10 @@ function sale(){
 				$("#totalcarrito").empty().append("$0.00");
 				contador=0;
 				cuenta=0;
-					}
+			}
 
 
-				});
+		});
 
 
 	}
@@ -143,10 +158,6 @@ function eliminar_carrito(id,price_out){
 	$("#totalcarrito").empty().append("$"+parseFloat(cuenta).toFixed(2));
 
 }
-
-function iniciovender() {
-	window.location.replace( 'vender.html?id='+userid);
-}
 function addCommas(nStr) {
 	nStr += '';
 	var x = nStr.split('.');
@@ -158,11 +169,22 @@ function addCommas(nStr) {
 	}
 	return x1 + x2;
 }
+function logout(){
+	window.location.replace("index.html");
+}
 function iniciovender() {
 
- window.location.href= 'vender.html?id='+userid+'&stock='+stock;
+	window.location.href= "vender.html?id="+userid+"&name="+username+"&stock="+stock;
 }
 function inicioventas() {
 
- window.location.href= 'ventas.html?id='+userid+'&stock='+stock;
+	window.location.href= "ventas.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+
+function iniciodevoluciones() {
+
+	window.location.href= "devoluciones.html?id="+userid+"&name="+username+"&stock="+stock;
+}
+function inicioinicio(){
+	window.location.href= "inicio.html?id="+userid+"&name="+username+"&stock="+stock;
 }
