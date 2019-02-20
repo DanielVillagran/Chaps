@@ -381,7 +381,7 @@
 }
 
 #divtotal {
-    padding-top: 10px;
+    padding-top: 25px;
     text-align: center;
     padding-right: 10px;
 }
@@ -534,7 +534,7 @@
 #tablamisventas th {
     font-family: "Open Sans";
     font-size: 17px;
-    width: 40vh;
+    width: 50vh;
     padding: 16px;
 }
 
@@ -542,7 +542,7 @@
     padding-left: 16px;
     font-family: "Open Sans";
     font-size: 15px;
-    width: 40vh;
+    width: 50vh;
 }
 
 #tablamisventas > tbody > tr:nth-child(2n+1) > td,

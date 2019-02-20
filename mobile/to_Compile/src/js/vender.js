@@ -12,7 +12,7 @@ $(document).ready(function(){
 	userid=url[0];
 	//$("#userinicio").empty().append(username);
 	swal({
-		title: "Cargando",
+		title: "Cargando...",
 		showConfirmButton: false,
 		imageUrl: "loader.gif"
 	});
@@ -42,7 +42,7 @@ $("#buscar").keyup(function(event){
 		dataType: "json",
 		beforeSend: function() {
 			swal({
-				title: "Cargando",
+				title: "Cargando...",
 				showConfirmButton: false,
 				imageUrl: "loader.gif"
 			});
@@ -116,12 +116,13 @@ function sale(){
 						dataType: 'html',
 						success() {
 
-							swal("<p id='pswal'>Venta realizada</p>", "<p id='psswal'> El cambio a entregar es de: <br> <b id='psbswal'>$" + addCommas(total) + ".<sup id='supswal'>00</sup></b></p>", "success");
+							
 
 
 						}
 					});
 				});
+				swal("<p id='pswal'>Venta realizada</p>", "<p id='psswal'> El cambio a entregar es de: <br> <b id='psbswal'>$" + addCommas(total) + ".<sup id='supswal'>00</sup></b></p>", "success");
 
 				$('#tablacarrito  tbody').empty();
 				$("#totalcarrito").empty().append("$0.00");

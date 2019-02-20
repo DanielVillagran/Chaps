@@ -22,7 +22,7 @@ $( "#form_devolucion" ).submit(function( event ) {
 	userid=url[0];
 	//console.log(userid);
 	swal({
-		title: "Cargando",
+		title: "Cargando...",
 		showConfirmButton: false,
 		imageUrl: "loader.gif"
 	});
@@ -39,7 +39,7 @@ $( "#form_devolucion" ).submit(function( event ) {
 		dataType: 'html',
 		beforeSend(){
 			swal({
-				title: "Cargando",
+				title: "Cargando...",
 				showConfirmButton: false,
 				imageUrl: "loader.gif"
 			});

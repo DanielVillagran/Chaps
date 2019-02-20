@@ -13,7 +13,7 @@ $(document).ready(function(){
 	userid=url[0];
 	//$("#userinicio").empty().append(username);
 	swal({
-		title: "Cargando",
+		title: "Cargando...",
 		showConfirmButton: false,
 		imageUrl: "loader.gif"
 	});
@@ -41,11 +41,6 @@ $(document).ready(function(){
 		});
 });
 $("#buscar").keyup(function(event){
-	swal({
-		title: "Cargando",
-		showConfirmButton: false,
-		imageUrl: "loader.gif"
-	});
 	forge.request.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
@@ -57,7 +52,7 @@ $("#buscar").keyup(function(event){
 		dataType: "json",
 		beforeSend: function() {
 			swal({
-				title: "Cargando",
+				title: "Cargando...",
 				showConfirmButton: false,
 				imageUrl: "loader.gif"
 			});

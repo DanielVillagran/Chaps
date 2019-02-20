@@ -2,7 +2,7 @@ var server="http://brayammorando.com/Chaps";
 $(document).ready(function(){
 	$("#login").click(function(){
 		swal({
-			title: "Cargando",
+			title: "Cargando...",
 			showConfirmButton: false,
 			imageUrl: "loader.gif"
 		});
@@ -16,7 +16,7 @@ $(document).ready(function(){
 			dataType: "json",
 			beforeSend: function() {
 				swal({
-					title: "Cargando",
+					title: "Cargando...",
 					showConfirmButton: false,
 					imageUrl: "loader.gif"
 				});
@@ -38,5 +38,9 @@ $(document).ready(function(){
 			}
 		});
 	});
+	$("#nc").click(function(){
+		window.location.href="vender_nc.html";
+	});
+
 
 });
