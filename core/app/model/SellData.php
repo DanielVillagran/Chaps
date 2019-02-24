@@ -283,7 +283,7 @@ public function add_with_client(){
 
 
 		public static function getGroupByDateOp($start,$end,$op){
-  $sql = "select id,sum(total) as tot,discount,sum(total-discount) as t,count(*) as c from ".self::$tablename." where date(created_at) >= \"$start\" and date(created_at) <= \"$end\" and operation_type_id=$op";
+  $sql = "select id,sum(total) as tot,sum(total-discount) as t,count(*) as c from ".self::$tablename." where date(created_at) >= \"$start\" and date(created_at) <= \"$end\" and operation_type_id=$op";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new SellData());
 	}
