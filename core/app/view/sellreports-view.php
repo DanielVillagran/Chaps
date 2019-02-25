@@ -151,6 +151,7 @@ $users = UserData::getAll();
 					doc.text("Usuario: <?php echo Core::$user->name." ".Core::$user->lastname; ?>  -  Fecha: <?php echo date("d-m-Y h:i:s");?> ", 40, 90);
 					var columns = [
 					{title: "Id", dataKey: "id"}, 
+					{title: "Producto", dataKey: "product"},
 					{title: "Subtotal", dataKey: "subtotal"}, 
 					{title: "Descuento", dataKey: "discount"}, 
 					{title: "Total", dataKey: "total"}, 
@@ -160,9 +161,11 @@ $users = UserData::getAll();
 					];
 					var rows = [
 					<?php foreach($operations as $operation):
+						$operacion = OperationData::getAllProductsBySellId($operation->id); 
 						?>
 						{
 							"id": "<?php echo $operation->id; ?>",
+							"product": "<?php   if($operacion!=null){ $c=ProductData::getById($operacion[0]->product_id); echo $c->name;}  ?>",
 							"subtotal": "$ <?php echo number_format($operation->total,2,'.',','); ?>",
 							"discount": "$ <?php echo number_format($operation->discount,2,'.',','); ?>",
 							"total": "$ <?php echo number_format($operation->total-$operation->discount,2,'.',','); ?>",

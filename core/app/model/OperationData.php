@@ -78,22 +78,22 @@ class OperationData {
 
 
 	public static function getAllByDateOfficial($stock,$start,$end){
- $sql = "select * from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and stock_id=$stock order by created_at desc";
+		$sql = "select * from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and stock_id=$stock order by created_at desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new OperationData());
 	}
 
 
-public static function getPPByDateOfficial($start,$end){
- $sql = "select *,sum(q) as total from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and operation_type_id=2 group by product_id order by total desc";
+	public static function getPPByDateOfficial($start,$end){
+		$sql = "select *,sum(q) as total from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and operation_type_id=2 group by product_id order by total desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new OperationData());
 	}
 
 	public static function getAllByDateOfficialBP($stock,$product, $start,$end){
- $sql = "select * from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and product_id=$product and stock_id=$stock order by created_at desc";
+		$sql = "select * from ".self::$tablename." where (date(created_at) >= \"$start\" and date(created_at) <= \"$end\") and product_id=$product and stock_id=$stock order by created_at desc";
 		if($start == $end){
-		 $sql = "select * from ".self::$tablename." where date(created_at) = \"$start\" order by created_at desc";
+			$sql = "select * from ".self::$tablename." where date(created_at) = \"$start\" order by created_at desc";
 		}
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new OperationData());
@@ -110,8 +110,8 @@ public static function getPPByDateOfficial($start,$end){
 		$input_id = OperationTypeData::getByName("entrada")->id;
 		$output_id = OperationTypeData::getByName("salida")->id;
 		foreach($operations as $operation){
-				if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
-				else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
+			if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
+			else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
 		}
 		// print_r($data);
 		return $q;
@@ -125,8 +125,8 @@ public static function getPPByDateOfficial($start,$end){
 		$input_id = OperationTypeData::getByName("entrada")->id;
 		$output_id = OperationTypeData::getByName("salida")->id;
 		foreach($operations as $operation){
-				if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
-				else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
+			if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
+			else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
 		}
 		// print_r($data);
 		return $q;
@@ -137,7 +137,7 @@ public static function getPPByDateOfficial($start,$end){
 		$operations = self::getAllByProductIdAndStock($product_id,$stock_id);
 		$input_id = OperationTypeData::getByName("entrada-pendiente")->id;
 		foreach($operations as $operation){
-				if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
+			if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
 		}
 		// print_r($data);
 		return $q;
@@ -148,7 +148,7 @@ public static function getPPByDateOfficial($start,$end){
 		$operations = self::getAllByProductIdAndStock($product_id,$stock_id);
 		$input_id = OperationTypeData::getByName("salida-pendiente")->id;
 		foreach($operations as $operation){
-				if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
+			if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
 		}
 		// print_r($data);
 		return $q;
@@ -205,14 +205,16 @@ public static function getPPByDateOfficial($start,$end){
 		return $q;
 	}
 
-	public static function getOutputQYesF($product_id){
+	public static function getOutputQYesF($product_id,$stock_id){
 		$q=0;
 		$operations = self::getOutputByProductId($product_id);
 		$input_id = OperationTypeData::getByName("entrada")->id;
 		$output_id = OperationTypeData::getByName("salida")->id;
 		foreach($operations as $operation){
-			if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
-			else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
+			if($operation->stock_id==$stock_id){
+				if($operation->operation_type_id==$input_id){ $q+=$operation->q; }
+				else if($operation->operation_type_id==$output_id){  $q+=(-$operation->q); }
+			}
 		}
 		// print_r($data);
 		return $q;
