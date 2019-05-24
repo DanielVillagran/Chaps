@@ -1,4 +1,4 @@
-var server="http://localhost/RepositorioChaps";
+var server="http://heladoschaps.com";
 $(document).ready(function(){
 	$("#login").click(function(){
 		swal({

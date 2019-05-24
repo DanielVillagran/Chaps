@@ -1,4 +1,4 @@
-var server="http://localhost/RepositorioChaps";
+var server="http://heladoschaps.com";
 var username="";
 var userid="";
 var stock='';
