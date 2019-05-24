@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 var username="";
 var userid="";
 var cuenta=0;
@@ -11,7 +11,7 @@ $(document).ready(function(){
 	stock=url[1].split("&stock=")[1];
 	userid=url[0];
 	//$("#userinicio").empty().append(username);
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": ""},
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		});
 });
 $("#buscar").keyup(function(event){
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": $("#buscar").val()},
@@ -100,7 +100,7 @@ function sale(){
 					product = product.trim();
 					price_out = $(this).find("td:eq(1)").text();
 					price_out = price_out.trim();
-					forge.request.ajax({
+					$.ajax({
 						url: server+"/webserviceapp/sale.php",
 						type: 'post',
 						async: false,

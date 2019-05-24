@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 $(document).ready(function(){
 	$("#login").click(function(){
 		swal({
@@ -6,7 +6,7 @@ $(document).ready(function(){
 			showConfirmButton: false,
 			imageUrl: "loader.gif"
 		});
-		forge.request.ajax({
+		$.ajax({
 			url: server+"/webserviceapp/login_process.php",
 			type: "POST",
 			data: {

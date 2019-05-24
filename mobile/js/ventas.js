@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://localhost/RepositorioChaps";
 var username="";
 var userid="";
 var cuenta=0;
@@ -12,7 +12,7 @@ $(document).ready(function(){
 	stock=url[1].split("&stock=")[1];
 	userid=url[0];
 	//$("#userinicio").empty().append(username);
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
 		data: {
@@ -40,7 +40,7 @@ $(document).ready(function(){
 		});
 });
 $("#buscar").keyup(function(event){
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_sales.php",
 		type: "POST",
 		data: {
@@ -85,7 +85,7 @@ function corte(){
 				swal("<p id='pswalerror'>Atención</p>", "<p id='psswalerror'>Para realizar un corte de caja primero debes realizar una venta.</p>", "info");
 
 			} else {
-				forge.request.ajax({
+				$.ajax({
 					url: server+"/webserviceapp/corte.php",
 					type: "POST",
 					data: {
@@ -101,7 +101,7 @@ function corte(){
 				//$("#tablamisventas > tbody").empty().append(data.lista);
 				total=0;
 				$("#ptotalventas").empty().append("$"+addCommas(parseFloat(total).toFixed(2)));
-				forge.request.ajax({
+				$.ajax({
 					url: server+"/webserviceapp/get_sales.php",
 					type: "POST",
 					data: {
