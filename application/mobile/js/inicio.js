@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://heladoschaps.com";
 var username="";
 var userid="";
 var stock='';

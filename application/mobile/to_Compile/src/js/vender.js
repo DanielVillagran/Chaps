@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://heladoschaps.com";
 var username="";
 var userid="";
 var cuenta=0;
@@ -16,7 +16,7 @@ $(document).ready(function(){
 		showConfirmButton: false,
 		imageUrl: "loader.gif"
 	});
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": ""},
@@ -35,7 +35,7 @@ $(document).ready(function(){
 });
 $("#buscar").keyup(function(event){
 	
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": $("#buscar").val()},
@@ -95,15 +95,27 @@ function sale(){
 
 			} else if (result.value) {
 
-				total = parseFloat(inputValue) - total;
+					total = parseFloat(inputValue) - total;
 				var product='';
 				var price_out='';
+				var ticket="";
+				var cualquierCadena="";
 				$('#tablacarrito > tbody  > tr').each(function () {
 					product = $(this).find("td:eq(0)").text();
 					product = product.trim();
+					cualquierCadena=product;
 					price_out = $(this).find("td:eq(1)").text();
 					price_out = price_out.trim();
-					forge.request.ajax({
+					if(cualquierCadena.length>20){
+						cualquierCadena.substring(0,20)
+
+					}else{
+						for(var x=cualquierCadena.length;x<20;x++){
+							cualquierCadena+=" ";
+						}
+					}
+					ticket+=cualquierCadena+"    $"+addCommas(price_out)+"\n";
+					$.ajax({
 						url: server+"/webserviceapp/sale.php",
 						type: 'post',
 						async: false,
@@ -122,8 +134,25 @@ function sale(){
 						}
 					});
 				});
-				swal("<p id='pswal'>Venta realizada</p>", "<p id='psswal'> El cambio a entregar es de: <br> <b id='psbswal'>$" + addCommas(total) + ".<sup id='supswal'>00</sup></b></p>", "success");
+				ticket+="\n\n\n";
+				ticket+="Total:        $"+addCommas(total);
+				$.ajax({
+					url: "http://192.168.0.15/ticket/ticket.php",
+					type: 'post',
+					data: {
+						'ticket': ticket,
+						"total":1550
+					},
+					dataType: 'html',
+					success() {
 
+						
+
+
+					}
+				});
+				swal("<p id='pswal'>Venta realizada</p>", "<p id='psswal'> El cambio a entregar es de: <br> <b id='psbswal'>$" + addCommas(total) + ".<sup id='supswal'>00</sup></b></p>", "success");
+				
 				$('#tablacarrito  tbody').empty();
 				$("#totalcarrito").empty().append("$0.00");
 				contador=0;

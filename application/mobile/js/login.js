@@ -1,7 +1,7 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://heladoschaps.com";
 $(document).ready(function(){
 	$("#login").click(function(){
-		forge.request.ajax({
+		$.ajax({
 			url: server+"/webserviceapp/login_process.php",
 			type: "POST",
 			data: {

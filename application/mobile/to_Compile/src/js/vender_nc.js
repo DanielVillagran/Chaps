@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://heladoschaps.com";
 var username="";
 var userid="";
 var cuenta=0;
@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 $("#buscar").keyup(function(event){
 	
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/get_products.php",
 		type: "POST",
 		data: {"product": $("#buscar").val()},
@@ -194,7 +194,7 @@ function inicioinicio(){
 						showConfirmButton: false,
 						imageUrl: "loader.gif"
 					});
-					forge.request.ajax({
+					$.ajax({
 						url: server+"/webserviceapp/login_process.php",
 						type: "POST",
 						data: {
@@ -221,7 +221,7 @@ function inicioinicio(){
 						product = product.trim();
 						price_out = venta.price_out;
 						price_out = price_out.trim();
-						forge.request.ajax({
+						$.ajax({
 							url: server+"/webserviceapp/sale.php",
 							type: 'post',
 							async: false,
@@ -240,7 +240,7 @@ function inicioinicio(){
 							}
 						});
 					});
-					forge.request.ajax({
+					$.ajax({
 						url: server+"/webserviceapp/corte.php",
 						type: "POST",
 						data: {

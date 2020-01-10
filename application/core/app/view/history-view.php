@@ -78,7 +78,7 @@ $total = OperationData::GetQByStock($product->id,$stock->id);
 
 
 	<?php
-$ototal = -1*OperationData::GetOutputQYesF($product->id);
+$ototal = -1*OperationData::GetOutputQYesF($product->id,$stock->id);
 
 	?>
 

@@ -1,4 +1,4 @@
-var server="http://brayammorando.com/Chaps";
+var server="http://heladoschaps.com";
 var username="";
 var userid="";
 var cuenta=0;
@@ -21,7 +21,7 @@ $( "#form_devolucion" ).submit(function( event ) {
 	stock=url[1].split("&stock=")[1];
 	userid=url[0];
 	console.log(userid);
-	forge.request.ajax({
+	$.ajax({
 		url: server+"/webserviceapp/devolucion.php",
 		type: 'post',
 		async: false,
