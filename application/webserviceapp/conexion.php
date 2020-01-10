@@ -1,13 +1,9 @@
 <?php
 
-require("rb.php");
+require "rb.php";
 
- R::setup( 'mysql:host=localhost;dbname=chaps',
+R::setup('mysql:host=localhost;dbname=casamar5_chaps',
 
-        'root', '' );
+	'casamar5_uno', 'daniel200796');
 
-
-
-
-
- ?>
+?>
