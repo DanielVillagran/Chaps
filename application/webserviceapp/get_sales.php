@@ -51,7 +51,7 @@ if ($lista) {
 	}
 }
 $lista = R::getAll("SELECT count(*) as contador, SUM(importe) as sumatoria from devoluciones
-	where s.stock_id = " . $_POST['stock_id'] . "  and user_id =" . $_POST['user_id'] . "");
+	where stock_id = " . $_POST['stock_id'] . "  and user_id =" . $_POST['user_id'] . "");
 $ventas['total_dev'] = 0;
 if ($lista) {
 	foreach ($lista as $key) {
