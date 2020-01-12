@@ -1,18 +1,18 @@
 <?php
 
-require ('conexion.php');
+require 'conexion.php';
 
-$url="application/storage/products/";
-if($_POST['stock_id']=='admin'){
-	$_POST['stock_id']="1";
+$url = "application/storage/products/";
+if ($_POST['stock_id'] == 'admin') {
+	$_POST['stock_id'] = "1";
 }
- R::exec( "insert into devoluciones (stock_id,importe,concepto,user_id,created_at) values
- 	(".$_POST['stock_id'].",
-    ".$_POST['importe'].",
- 	'".$_POST['concepto']."',
- 	".$_POST['user_id'].",
+var_dump(R::exec("insert into devoluciones (stock_id,importe,concepto,user_id,created_at) values
+ 	(" . $_POST['stock_id'] . ",
+    " . $_POST['importe'] . ",
+ 	'" . $_POST['concepto'] . "',
+ 	" . $_POST['user_id'] . ",
  	NOW()
-)" );
+)"));
 ?>
 <!-- $servername = "localhost";
 $username = "root";
@@ -26,7 +26,7 @@ $conn = mysqli_connect($servername, $username, $password,$dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql='INSERT INTO sell (person_id,stock_to_id,iva,p_id,d_id,total,discount,user_id,created_at) 
+$sql='INSERT INTO sell (person_id,stock_to_id,iva,p_id,d_id,total,discount,user_id,created_at)
  	(NULL,
  	'+$_POST['stock_id']+',
  	'+16+',
