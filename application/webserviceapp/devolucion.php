@@ -3,15 +3,15 @@
 require 'conexion.php';
 
 $url = "application/storage/products/";
-if (is_numeric($_POST['stock_id']) {
+if ($_POST['stock_id'] == 'admin') {
 	$_POST['stock_id'] = "1";
 }
-R::exec("insert into devoluciones (stock_id,importe,concepto,user_id,created_at) values
+R::exec("insert into devoluciones (stock_id,importe,concepto,user_id,created_at,cortado) values
  	(" . $_POST['stock_id'] . ",
     " . $_POST['importe'] . ",
  	'" . $_POST['concepto'] . "',
  	" . $_POST['user_id'] . ",
- 	NOW()
+ 	NOW(),0
 )");
 ?>
 <!-- $servername = "localhost";
