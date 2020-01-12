@@ -50,6 +50,24 @@ if ($lista) {
 		$ventas['lista_ticket'] .= $key['name'] . '          ' . $key['contador'] . "\n";
 	}
 }
+$lista = R::getAll("SELECT count(*) as contador, SUM(importe) as sumatoria from devoluciones
+	where s.stock_id = " . $_POST['stock_id'] . "  and user_id =" . $_POST['user_id'] . "");
+$ventas['total_dev'] = 0;
+if ($lista) {
+	foreach ($lista as $key) {
+		if (strlen($key['name']) > 20) {
+			$key['name'] = substr($key['name'], 0, 20);
+
+		} else {
+			for ($i = strlen($key['name']); $i < 20; $i++) {
+				$key['name'] .= ' ';
+			}
+
+		}
+		$ventas['lista_ticket'] .= 'Devoluciones        ' . '          ' . $key['contador'] . "\n";
+		$ventas['total_dev'] = $key['sumatoria'];
+	}
+}
 echo json_encode($ventas);
 
 ?>
