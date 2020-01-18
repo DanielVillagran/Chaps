@@ -90,7 +90,15 @@ if (count($products) > 0) {
 <br><br><br><br><br><br><br><br><br><br>
 </div>
 </div>
-
+ <script type="text/javascript">
+  function cambio(){
+    if($("#controles").val()!=""){
+      window.location.href="./?view=devoluciones&opt="+$("#controles").val();
+    }else{
+      window.location.href="./?view=devoluciones";
+    }
+  }
+</script>
 <script type="text/javascript">
   function thePDF() {
     var doc = new jsPDF('p', 'pt');
@@ -158,12 +166,4 @@ if ($con != null && $con->val != ""):
       <?php endif;?>
     }
   </script>
-  <script type="text/javascript">
-  function cambio(){
-    if($("#controles").val()!=""){
-      window.location.href="./?view=devoluciones&opt="+$("#controles").val();
-    }else{
-      window.location.href="./?view=devoluciones";
-    }
-  }
-</script>
+
