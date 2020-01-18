@@ -267,9 +267,14 @@ class OperationData {
 		$query = Executor::doit($sql);
 		return Model::many($query[0], new OperationData());
 	}
-	public static function getDevoluciones() {
+	public static function getDevoluciones($stock = null) {
+		$where = "";
+		if ($stock != null) {
+			$where = " WHERE devoluciones.stock_id=" . $stock;
+		}
 		$sql = "select devoluciones.*,stock.name,concat(user.name,' ',user.lastname) as username from devoluciones left join stock on stock.id=devoluciones.stock_id
-		left join user on devoluciones.user_id=user.id ";
+		left join user on devoluciones.user_id=user.id
+		" . $where;
 		$query = Executor::doit($sql);
 		return Model::many($query[0], new OperationData());
 	}
