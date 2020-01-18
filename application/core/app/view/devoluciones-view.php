@@ -41,9 +41,8 @@ $elemento = null;
 if (isset($_GET["opt"])) {
 	$elemento = $_GET["opt"];
 }
-if (isset($_GET["opt"])) {
-	$products = OperationData::getDevoluciones($elemento);
-}
+
+$products = OperationData::getDevoluciones($elemento);
 
 if (count($products) > 0) {
 	?>
