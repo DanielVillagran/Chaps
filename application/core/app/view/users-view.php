@@ -51,7 +51,8 @@ switch ($user->kind) {
 		}
 		?>
 				</td>
-				<td style="width:30px;"><a href="index.php?view=edituser&id=<?php echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a></td>
+				<td style="width:30px;"><a href="index.php?view=edituser&id=<?php echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a>
+				<a href="index.php?view=delusers&id=<?php echo $user->id; ?>" class="btn btn-danger btn-xs">Eliminar</a></td>
 				</tr>
 				<?php
 
